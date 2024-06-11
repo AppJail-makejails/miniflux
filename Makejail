@@ -1,0 +1,34 @@
+INCLUDE options/options.makejail
+
+ARG miniflux_tag=13.3
+
+FROM --entrypoint gh+AppJail-makejails/miniflux miniflux:${miniflux_tag}
+
+STOP
+
+STAGE start
+
+ENV LISTEN_ADDR=0.0.0.0:8080
+
+WORKDIR /app
+
+RUN daemon \
+        -r \
+        -t "Self-hosted software to read RSS/Atom/JSON feeds" \
+	-u miniflux \
+        -P /app/.master.pid \
+        -p /app/.pid \
+        -o /app/miniflux.log \
+		miniflux
+
+STAGE custom:miniflux_status
+
+CMD if [ -f "/app/.pid" ]; then \
+        top -ap `head -1 /app/.pid`; \
+    fi
+
+STAGE custom:miniflux_log
+
+CMD if [ -f "/app/miniflux.log" ]; then \
+        less -R /app/miniflux.log; \
+    fi
