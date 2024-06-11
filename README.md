@@ -47,6 +47,17 @@ appjail start \
     miniflux
 ```
 
+**template.conf**:
+
+```
+exec.start: "/bin/sh /etc/rc"
+exec.stop: "/bin/sh /etc/rc.shutdown jail"
+sysvmsg: new
+sysvsem: new
+sysvshm: new
+mount.devfs
+```
+
 ### Arguments (stage: build):
 
 * `miniflux_tag` (default: `13.3`): see [#tags](#tags).
