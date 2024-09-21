@@ -1,6 +1,6 @@
 INCLUDE options/options.makejail
 
-ARG miniflux_tag=13.3
+ARG miniflux_tag=13.4
 
 FROM --entrypoint gh+AppJail-makejails/miniflux miniflux:${miniflux_tag}
 
