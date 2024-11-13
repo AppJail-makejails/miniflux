@@ -13,10 +13,8 @@ ENV LISTEN_ADDR=0.0.0.0:8080
 WORKDIR /app
 
 RUN daemon \
-        -r \
         -t "Self-hosted software to read RSS/Atom/JSON feeds" \
 	-u miniflux \
-        -P /app/.master.pid \
         -p /app/.pid \
         -o /app/miniflux.log \
 		miniflux
