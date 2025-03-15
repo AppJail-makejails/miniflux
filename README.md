@@ -32,7 +32,7 @@ appjail makejail \
     -o copydir=/ \
     -o file=/usr/local/etc/pkg/repos/Latest.conf \
         -- \
-        --postgres_tag 13.4-16
+        --postgres_tag 13.5-16
 appjail makejail \
     -j miniflux \
     -f gh+AppJail-makejails/miniflux \
@@ -60,7 +60,7 @@ mount.devfs
 
 ### Arguments (stage: build):
 
-* `miniflux_tag` (default: `13.4`): see [#tags](#tags).
+* `miniflux_tag` (default: `13.5`): see [#tags](#tags).
 * `miniflux_ajspec` (default: `gh+AppJail-makejails/miniflux`): Entry point where the `appjail-ajspec(5)` file is located.
 
 ### Check current status
@@ -83,5 +83,5 @@ appjail run -s miniflux_log miniflux
 
 | Tag    | Arch    | Version        | Type   |
 | ------ | ------- | -------------- | ------ |
-| `13.4` | `amd64` | `13.4-RELEASE` | `thin` |
+| `13.5` | `amd64` | `13.5-RELEASE` | `thin` |
 | `14.2` | `amd64` | `14.2-RELEASE` | `thin` |
