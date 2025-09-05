@@ -1,16 +1,17 @@
 tags+: 13.5
 13.5.arch: amd64
 13.5.name: "miniflux"
-13.5.timestamp.amd64: 1755254635
-13.5.sum.amd64: b949bf54bef2e5af315cf390756d7362d7c3faf945b51c5903fc8ca9c207bc74
-13.5.size.amd64: 38961541
+13.5.timestamp.amd64: 1757049491
+13.5.sum.amd64: 57718cd895e23c52e9c465736e4f200a185e2d04b0d314c66795f6b55bbac97c
+13.5.size.amd64: 38603277
 13.5.source.amd64: "https://images.all101bsd.download/miniflux/13.5-amd64-image.appjail"
 13.5.source.amd64+: "http://appjail.hpc.at/miniflux/13.5-amd64-image.appjail"
 tags+: 14.3
 14.3.arch: amd64
 14.3.name: "miniflux"
-14.3.timestamp.amd64: 1755254729
-14.3.sum.amd64: 1e338fbef7860d0fa4f4098282a28ba99f9accc62009e4ce158afcfd2db43992
-14.3.size.amd64: 38331292
+14.3.timestamp.amd64: 1757049580
+14.3.sum.amd64: 1eca0e3ed72cdad4bdd8f19aab3b966f946b9d4d11184c07f3490a1d9b0560a0
+14.3.size.amd64: 38431882
 14.3.source.amd64: "https://images.all101bsd.download/miniflux/14.3-amd64-image.appjail"
 14.3.source.amd64+: "http://appjail.hpc.at/miniflux/14.3-amd64-image.appjail"
+maintenance: "This image is uploading, please wait a moment and try again. If you are importing this image using a Makejail that has the '--<name>_ajspec' argument, you can use the 'reproduce' method to use 'appjail-reproduce'. See 'appjail-image(5)' for details."
