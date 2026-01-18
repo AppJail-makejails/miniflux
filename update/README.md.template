@@ -84,4 +84,4 @@ appjail run -s miniflux_log miniflux
 | Tag    | Arch    | Version        | Type   |
 | ------ | ------- | -------------- | ------ |
 | `%%TAG1%%` | `amd64` | `%%TAG1%%-RELEASE` | `thin` |
-| `%%TAG2%%` | `amd64` | `%%TAG2%%-RELEASE` | `thin` |
+| `%%TAG2%%` | `amd64` | `%%TAG2%%` | `thin` |
