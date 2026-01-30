@@ -12,4 +12,3 @@ tags+: 15
 15.sum.amd64: b73d7238320ec0d390a3c1c29c006d37d5f5cb7c5c7ee93fecf4a9706e0d0dbd
 15.size.amd64: 209297004
 15.source.amd64: "http://appjail.hpc.at/miniflux/15-amd64-image.appjail"
-maintenance: "This image is uploading, please wait a moment and try again. If you are importing this image using a Makejail that has the '--<name>_ajspec' argument, you can use the 'reproduce' method to use 'appjail-reproduce'. See 'appjail-image(5)' for details."
