@@ -1,33 +1,5 @@
-INCLUDE options/options.makejail
+ARG miniflux_from=ghcr.io/appjail-makejails/miniflux
+ARG miniflux_tag=latest
 
-ARG miniflux_tag=14.3
-ARG miniflux_ajspec=gh+AppJail-makejails/miniflux
-
-FROM --entrypoint "${miniflux_ajspec}" miniflux:${miniflux_tag}
-
-STOP
-
-STAGE start
-
-ENV LISTEN_ADDR=0.0.0.0:8080
-
-WORKDIR /app
-
-RUN daemon \
-        -t "Self-hosted software to read RSS/Atom/JSON feeds" \
-	-u miniflux \
-        -p /app/.pid \
-        -o /app/miniflux.log \
-		miniflux
-
-STAGE custom:miniflux_status
-
-CMD if [ -f "/app/.pid" ]; then \
-        top -ap `head -1 /app/.pid`; \
-    fi
-
-STAGE custom:miniflux_log
-
-CMD if [ -f "/app/miniflux.log" ]; then \
-        less -R /app/miniflux.log; \
-    fi
+OPTION overwrite=force
+OPTION from=${miniflux_from}:${miniflux_tag}
