@@ -1,5 +1,6 @@
 ARG miniflux_from=ghcr.io/appjail-makejails/miniflux
 ARG miniflux_tag=latest
 
+OPTION container=boot
 OPTION overwrite=force
 OPTION from=${miniflux_from}:${miniflux_tag}

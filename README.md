@@ -35,7 +35,7 @@ Once the container is started, you should be able to access the application on t
 options:
   - virtualnet: ':<random> default'
   - nat:
-  - container: 'boot args:--pull'
+  - container: 'args:--pull'
 
 services:
   miniflux:
