@@ -43,7 +43,7 @@ services:
     makejail: gh+AppJail-makejails/miniflux
     oci:
       environment:
-        - DATABASE_URL: postgres://miniflux:secret@10.0.0.60/miniflux?sslmode=disable
+        - DATABASE_URL: postgres://miniflux:secret@miniflux-db/miniflux?sslmode=disable
         - RUN_MIGRATIONS: 1
         - CREATE_ADMIN: 1
         - ADMIN_USERNAME: admin
@@ -62,7 +62,6 @@ services:
       - miniflux-db: /var/db/postgres
     options:
       - template: !ENV '${PWD}/template.conf'
-      - virtualnet: 'ajnet:<random> address:10.0.0.60 default'
 
 volumes:
   miniflux-db:
