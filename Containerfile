@@ -14,7 +14,7 @@ LABEL org.opencontainers.image.title="Miniflux" \
 RUN set -xe; \
     \
     pkg update; \
-    pkg install -U miniflux; \
+    pkg install miniflux; \
     \
     if [ -z "${NO_PKGCLEAN}" ]; then \
         pkg clean -a; \
